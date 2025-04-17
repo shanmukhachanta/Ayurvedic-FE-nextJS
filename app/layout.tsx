@@ -1,7 +1,9 @@
+// This is your layout.tsx file - split into two components
+// layout.tsx (Server Component)
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
+import NavBar from './Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,20 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-sm border-b">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-              <Link href="/" className="text-xl font-semibold text-green-700">CBM Amba</Link>
-              <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-foreground/80 hover:text-foreground">Home</Link>
-                <Link href="/about" className="text-foreground/80 hover:text-foreground">About Us</Link>
-                <Link href="/services" className="text-foreground/80 hover:text-foreground">Services</Link>
-                <Link href="/products" className="text-foreground/80 hover:text-foreground">Products</Link>
-                <Link href="/contact" className="text-foreground/80 hover:text-foreground">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <NavBar />
         {children}
         <footer className="bg-green-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">
@@ -45,10 +34,10 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-white/80 text-sm">
-                  <li><Link href="/" className="hover:text-white">Home</Link></li>
-                  <li><Link href="/services" className="hover:text-white">Services</Link></li>
-                  <li><Link href="/products" className="hover:text-white">Products</Link></li>
-                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                  <li><a href="/" className="hover:text-white">Home</a></li>
+                  <li><a href="/services" className="hover:text-white">Services</a></li>
+                  <li><a href="/products" className="hover:text-white">Products</a></li>
+                  <li><a href="/contact" className="hover:text-white">Contact</a></li>
                 </ul>
               </div>
               <div>

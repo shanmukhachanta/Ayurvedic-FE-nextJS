@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Leaf, Mountain, Users } from "lucide-react";
 import Image from "next/image";
+import group from "../group.png"
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1552858725-2758b5fb1286?q=80&w=1920&auto=format"
+                src={group}
                 alt="Ayurvedic Treatment"
                 fill
                 className="object-cover rounded-lg"

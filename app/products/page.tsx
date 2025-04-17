@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import aarogya from "../../../Arogya_rasayana.png";
+import aarogya from "../../Arogya_rasayana.png"
 
 export default function ProductsPage() {
   const products = [
